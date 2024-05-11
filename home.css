@@ -182,7 +182,7 @@ img {
 @media screen and (max-width: 1150px) {
     .nav__menu {
 
-        background-color: hsla(228, 24%, 6%, 0.2);
+        background-color: purple;
         /* add filter :0 */
         -webkit-backdrop-filter: blur(16px) !important;
         backdrop-filter: blur(16px) !important;
@@ -191,8 +191,9 @@ img {
         height: 100%;
         padding: 5rem 2.5rem 0;
         top: 0;
-        right: -100%;
 
+        right: -100%;
+        /* desaparece juas jaus */
         position: fixed;
         transition: right 1s;
 
@@ -222,4 +223,9 @@ img {
     right: 1.25rem;
     font-size: 2rem;
 
+}
+
+/* ============= JS ADDED CLASSES ============ */
+.show-menu {
+    right: 0;
 }
