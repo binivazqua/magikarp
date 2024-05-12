@@ -13,7 +13,7 @@
     --black-color: hsl(228, 6%, 4%);
     --body-color: hsl(228, 6%, 8%);
     --container-color: hsl(228, 6%, 12%);
-    --shadow-img: 0 0 48px hsla(93, 54%, 54%, .4);
+    --shadow-img: 0 0 48px grey;
     --gradient-card: linear-gradient(180deg,
             hsla(93, 8%, 8%),
             hsla(93, 40%, 30%));
@@ -166,10 +166,80 @@ img {
     font-size: 1.25rem;
 }
 
+/* ================== ABOUT ======================== */
+.about__container {
+    padding-top: 3rem;
+    row-gap: 3rem;
+}
 
+.about__img {
+    width: 270px;
+    filter: drop-shadow(var(--shadow-img));
+    justify-self: center;
+}
 
+.about__data {
+    text-align: center;
+}
 
+.about__title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: 2rem;
+}
 
+.about__title span {
+    color: blueviolet;
+}
+
+.about__description {
+    margin-bottom: 3rem;
+}
+
+.about__buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============== BUTTONS ================ */
+.button {
+    background-color: var(--white-color);
+    color: black;
+    font-weight: var(--font-bold);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4rem;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.button span {
+    background-color: var(--first-color);
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    border-radius: 5rem;
+    display: grid;
+    place-items: center;
+    transition: transform 0.4s;
+}
+
+/* ------- button animationss ---------- */
+.button:hover span {
+    transform: translateX(10px);
+}
+
+.button__link {
+    color: var(--white-color);
+    font-weight: var(--font-bold);
+    transition: color 0.4s;
+}
+
+.button__link:hover {
+    color: var(--first-color);
+}
 
 
 
