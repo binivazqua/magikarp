@@ -166,6 +166,35 @@ img {
     font-size: 1.25rem;
 }
 
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.nav__link {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+.nav__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 2rem;
+
+}
+
+/* ============= JS ADDED CLASSES ============ */
+.show-menu {
+    right: 0;
+}
+
 /* ================== ABOUT ======================== */
 .about__container {
     padding-top: 3rem;
@@ -173,7 +202,7 @@ img {
 }
 
 .about__img {
-    width: 270px;
+    width: 40%;
     filter: drop-shadow(var(--shadow-img));
     justify-self: center;
 }
@@ -202,6 +231,13 @@ img {
     column-gap: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+/* ======================== TECH SECTION ===================== */
+.tech__img {
+    width: 40%;
+    filter: drop-shadow(var(--shadow-img));
+    justify-self: center;
 }
 
 /* ============== BUTTONS ================ */
@@ -241,6 +277,23 @@ img {
     color: var(--first-color);
 }
 
+.fact__list {
+    display: grid;
+    row-gap: 2rem;
+    justify-content: center;
+    /* puede cambiar */
+}
+
+.fact__item {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.fact__item i {
+    font-size: 2rem;
+    color: blueviolet;
+}
 
 
 
@@ -270,32 +323,4 @@ img {
 
     }
 
-}
-
-.nav__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 3rem;
-}
-
-.nav__link {
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-}
-
-.nav__link:hover {
-    color: var(--first-color);
-}
-
-.nav__close {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
-    font-size: 2rem;
-
-}
-
-/* ============= JS ADDED CLASSES ============ */
-.show-menu {
-    right: 0;
 }
