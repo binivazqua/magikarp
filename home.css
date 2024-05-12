@@ -342,6 +342,18 @@ img {
     justify-content: center;
 }
 
+/* ==================== TEAM SECTION ================== */
+.team__container {
+    padding-top: 4rem;
+    grid-template-columns: 250px;
+    justify-content: center;
+
+}
+
+.member__card {
+    position: relative;
+}
+
 /* ================= RESPONSIVENES ================= */
 @media screen and (max-width: 1150px) {
     .nav__menu {
