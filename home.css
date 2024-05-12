@@ -336,6 +336,10 @@ img {
 
 .contact__info {
     font-style: normal;
+    display: flex;
+    flex-direction: row;
+    row-gap: 2rem;
+    justify-content: center;
 }
 
 /* ================= RESPONSIVENES ================= */
