@@ -9,6 +9,11 @@
     src: url('fonts/TWKLausanne-650.ttf');
 }
 
+/* ================= ICONS ================ */
+.bx {
+    font-size: 48px;
+}
+
 /*=============== VARIABLES CSS ===============*/
 :root {
     --header-height: 3.5rem;
@@ -261,6 +266,7 @@ img {
     margin-top: 20px;
 }
 
+
 /* ============= JS ADDED CLASSES ============ */
 .show-menu {
     right: 0;
@@ -303,6 +309,64 @@ img {
     column-gap: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+/* ======================== ABOUT PROJECT ===================== */
+.aboutus__container {
+    row-gap: 8rem;
+    margin-top: 5rem;
+}
+
+.aboutus__data {
+    text-align: center;
+}
+
+
+
+.aboutus__data .section__title span {
+    color: var(--first-color-alt)
+}
+
+.aboutus__list {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: initial;
+    grid-template-columns: repeat(2, 250px);
+    justify-content: center;
+    gap: 1.5rem;
+
+}
+
+.aboutus__list-item {
+    display: flex;
+    column-gap: 0.5rem;
+    color: var(--first-color);
+}
+
+
+
+.aboutus__description {
+    margin-bottom: 2rem;
+}
+
+.aboutus__images {
+    position: relative;
+    justify-self: center;
+}
+
+.about__img-1 {
+    width: 500px;
+    border: 15px solid var(--body-color);
+    position: absolute;
+    top: -5rem;
+    left: 2rem;
+
+}
+
+.about__img-2 {
+    width: 450px;
+    margin-right: 2.5rem;
+    margin-top: 7rem;
 }
 
 /* ======================== TECH SECTION ===================== */
