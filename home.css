@@ -202,6 +202,33 @@ img {
 
     }
 
+    .members {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .members .team__container {
+        height: 600px;
+        width: 600px;
+        transform: scale(0.650);
+        position: relative;
+
+    }
+
+    .members .team__member {
+        width: auto;
+        height: auto;
+    }
+
+    .members .member__image {
+        position: absolute;
+        z-index: 3;
+        top: 65px;
+
+    }
+
+
 }
 
 .nav__list {
