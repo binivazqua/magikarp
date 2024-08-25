@@ -16,14 +16,14 @@
     /*Color mode HSL(hue, saturation, lightness)*/
     --first-color: hsl(255, 100%, 64%);
     --first-color-alt: hsl(255, 100%, 73%);
-    --first-color-light: hsl(93, 58%, 66%);
+    --first-color-dark: hsl(255, 55%, 13%);
     --title-color: hsl(228, 8%, 98%);
     --text-color: hsl(228, 8%, 70%);
     --white-color: hsl(228, 8%, 98%);
     --black-color: hsl(228, 6%, 4%);
     --body-color: hsl(228, 6%, 8%);
     --container-color: hsl(228, 6%, 12%);
-    --shadow-img: 0 0 48px grey;
+    --shadow-img: 0 0 48px rgb(24, 15, 51);
     --gradient-card: linear-gradient(180deg,
             hsla(93, 8%, 8%),
             hsla(93, 40%, 30%));
@@ -161,7 +161,7 @@ body {
 
 .card .checkOut div {
     background-color: var(--first-color);
-    color: white;
+    color: red;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -177,10 +177,93 @@ body {
 
 .list .item {
     text-align: center;
-    background-color: white;
+    background-color: transparent;
     padding: 20px;
-    box-shadow: 0 50px 50px grey;
-    letter-spacing: 1px;
+    /*box-shadow: 0 50px 50px grey;*/
+    letter-spacing: 3px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    line-height: 2.5rem;
+}
+
+.list .item:hover {
+    background-color: var(--first-color);
+}
+
+.list .item img {
+    width: 500px;
+    filter: drop-shadow(var(--shadow-img));
+    justify-self: center;
+}
+
+.list .item .title {
+
+    font-family: 'Lausanne650';
+    color: var(--first-color-alt);
+
+}
+
+.list .item:hover .title,
+.list .item:hover .price {
+
+    font-family: 'Lausanne650';
+    color: var(--white-color);
+
+}
+
+.list .item button {
+    background-color: var(--first-color-alt);
+    color: var(--first-color-dark);
+    font-size: 1.25rem;
+    padding: 10px;
+    width: 100%;
+    font-weight: 650;
+    border: 4px solid var(--first-color-alt);
+    cursor: pointer;
     transition: all 0.25s ease;
+}
+
+.list .item button:hover {
+
+    color: var(--white-color);
+}
+
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: var(green);
+    row-gap: 10px;
+}
+
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img {
+    width: 90%;
+}
+
+.listCard .count {
+    margin: 0px 10px;
+    color: var(green);
+}
+
+.cardTitle,
+.cardPrice {
+    color: var(--black-color);
+}
+
+.cardButton {
+    width: 28px;
+    height: 28px;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }

@@ -17,37 +17,37 @@ let products = [
     {
         id: 1,
         name: "PRODUCT 1",
-        images: "baymax.png",
+        images: "generative_prosthetic.png",
         price: 2000,
     },
     {
         id: 2,
         name: "PRODUCT 2",
-        images: "baymax.png",
+        images: "generative_prosthetic.png",
         price: 2000,
     },
     {
         id: 3,
         name: "PRODUCT 3",
-        images: "baymax.png",
+        images: "generative_prosthetic.png",
         price: 2000,
     },
     {
         id: 4,
         name: "PRODUCT 4",
-        images: "baymax.png",
+        images: "generative_prosthetic.png",
         price: 2000,
     },
     {
         id: 5,
         name: "PRODUCT 5",
-        images: "baymax.png",
+        images: "generative_prosthetic.png",
         price: 2000,
     },
     {
         id: 6,
         name: "PRODUCT 6",
-        images: "baymax.png",
+        images: "generative_prosthetic.png",
         price: 2000,
     }
 ]
@@ -62,7 +62,7 @@ const initApp = () => {
             <img src = "images/${value.images}">
             <div class ="title">${value.name}</div>
             <div class "price">${value.price.toLocaleString()}</div>
-            <button onclick = "addToCard(${key})"> Add To Card </
+            <button onclick = "addToCart(${key})"> Add To Cart </
             button>
         `
         list.appendChild(newDiv)
@@ -70,3 +70,45 @@ const initApp = () => {
 }
 
 initApp()
+
+const addToCart = (key) => {
+    if (listCards[key] == null) {
+        listCards[key] = JSON.parse(JSON.stringify(products[key]));
+        listCards[key].quantity = 1
+    }
+
+    reloadCard();
+}
+
+const reloadCard = () => {
+    listCard.innerHTML = "";
+    let count = 0;
+    let totalPrice = 0;
+    listCards.forEach((value, key) => {
+        totalPrice = totalPrice + value.price;
+        count = count + value.quantity;
+
+        if (value != null) {
+            let newDiv = document.createElement("li");
+            newDiv.innerHTML = `
+                
+                <div class = "cardTitle">${value.name}</div>
+                <div class = "cardPrice>${value.price.toLocaleString()}</div>
+
+                <div>
+                    <button style = "background-color: purple"
+                    class = "cardButton" onclick = "changeQuantity(${key}, ${value.quantity - 1})> - </button>
+                    <div class = "count"> ${count} </div>
+
+                    <button style = "background-color: purple"
+                    class = "cardButton" onclick = "changeQuantity(${key}, ${value.quantity + 1})> + </button>
+                </div>
+            `
+
+            listCard.appendChild(newDiv);
+        }
+
+        total.innerText = totalPrice.toLocaleString();
+        quantity.innerText = count;
+    })
+}
