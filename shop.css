@@ -273,6 +273,14 @@ ul {
     margin-top: 50px;
 }
 
+@media screen and (max-width: 860px) {
+    .container .list {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
 .card {
     position: fixed;
     top: 0;
