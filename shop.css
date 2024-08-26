@@ -68,6 +68,142 @@ body {
 
 }
 
+/* ============ NAV ================= */
+ul {
+    list-style: none;
+}
+
+/* ============== HEADER & NAV =============== */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ======== nav components ============ */
+.nav__logo,
+.nav__close,
+.nav__toggle {
+    display: flex;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/* ------- nav logo -------- */
+.nav__logo {
+    font-weight: 400;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.nav__logo i {
+    color: var(--first-color-alt);
+    font-size: 1.8rem;
+    font-weight: initial;
+}
+
+/* -------- nav actions ------*/
+.nav__toggle {
+    font-size: 1.25rem;
+}
+
+/* ================= RESPONSIVENES ================= */
+@media screen and (max-width: 860px) {
+    .nav__menu {
+
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: hsla(255, 100%, 73%, 0.8);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        width: 80%;
+        height: 100%;
+        padding: 6rem 3rem;
+        transition: right 0.4s;
+
+
+    }
+
+    .members {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .members .team__container {
+        height: 600px;
+        width: 600px;
+        transform: scale(0.650);
+        position: relative;
+
+    }
+
+    .members .team__member {
+        width: auto;
+        height: auto;
+    }
+
+    .members .member__image {
+        position: absolute;
+        z-index: 3;
+        top: 65px;
+
+    }
+
+
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.nav__link {
+    color: var(--title-color);
+    /*font-weight: var(--font-semi-bold);*/
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+    transition: color 0.4s;
+}
+
+.nav__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 2rem;
+
+}
+
+.morfo_logo {
+    width: 250px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+/* ============= JS ADDED CLASSES ============ */
+.show-menu {
+    right: 0;
+}
+
+/* =============================== */
 
 .logo {
     justify-self: center;
