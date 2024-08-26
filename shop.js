@@ -1,7 +1,8 @@
 const openShopping = document.querySelector(".shopping");
 const closeShopping = document.querySelector(".closeShopping");
 const list = document.querySelector(".list");
-const listCard = document.querySelector(".total");
+const listCard = document.querySelector(".listCard");
+const total = document.querySelector(".total");
 const body = document.querySelector("body");
 const quantity = document.querySelector(".quantity");
 
@@ -85,6 +86,7 @@ const reloadCard = () => {
     let count = 0;
     let totalPrice = 0;
     listCards.forEach((value, key) => {
+
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
 
@@ -93,22 +95,33 @@ const reloadCard = () => {
             newDiv.innerHTML = `
                 
                 <div class = "cardTitle">${value.name}</div>
-                <div class = "cardPrice>${value.price.toLocaleString()}</div>
+                <div class = "cardPrice">${value.price.toLocaleString()}</div>
 
-                <div>
-                    <button style = "background-color: purple"
-                    class = "cardButton" onclick = "changeQuantity(${key}, ${value.quantity - 1})> - </button>
+                <div class = "addSubstract">
+                    <button style = "background-color: var(--first-color)"
+                    class = "cardButton" onclick = "changeQuantity(${key}, ${value.quantity - 1})"> - </button>
                     <div class = "count"> ${count} </div>
 
-                    <button style = "background-color: purple"
-                    class = "cardButton" onclick = "changeQuantity(${key}, ${value.quantity + 1})> + </button>
+                    <button style = "background-color: var(--first-color)"
+                    class = "cardButton" onclick = "changeQuantity(${key}, ${value.quantity + 1})"> + </button>
                 </div>
-            `
+            `;
 
             listCard.appendChild(newDiv);
         }
 
-        total.innerText = totalPrice.toLocaleString();
+        total.innerText = "$ " + totalPrice.toLocaleString();
         quantity.innerText = count;
     })
+}
+
+const changeQuantity = (key, quantity) => {
+    if (quantity == 0) {
+        delete listCards[key]
+    } else {
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity * products[key].price
+    }
+
+    reloadCard()
 }
