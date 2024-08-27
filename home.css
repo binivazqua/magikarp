@@ -126,7 +126,7 @@ img {
 }
 
 .section {
-    padding-block: 5rem 1rem;
+    padding: 5rem 1rem 1rem 0;
 }
 
 .section__title {
@@ -635,9 +635,15 @@ img {
         margin-top: 2rem;
     }
 
+    .section {
+        padding-block: 5rem 1rem 1rem 0 !important;
+    }
+
     .members {
+        margin: auto;
         flex-direction: column;
         align-items: center;
+        padding: 3rem;
 
     }
 
