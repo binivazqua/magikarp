@@ -569,8 +569,7 @@ img {
 
     .aboutus__data {
         margin: auto;
-        max-width: 80%;
-        padding: 0 10rem;
+        padding: 0 3rem;
 
     }
 
@@ -579,6 +578,23 @@ img {
         row-gap: 8rem;
         margin: auto;
 
+
+    }
+
+
+    .aboutus__list {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--normal-font-size) - 0.25rem;
+        font-style: italic;
+        text-align: initial;
+        justify-content: center;
+        gap: 1.5rem;
+
+    }
+
+    .aboutus__list i {
+        font-size: var(--normal-font-size + 0.1rem);
 
     }
 
