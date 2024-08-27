@@ -567,9 +567,26 @@ img {
         row-gap: 3rem;
     }
 
+    .about__description {
+        margin: 0 1rem 1rem 0.5rem !important;
+
+    }
+
+    .about__img {
+        width: 60%;
+        filter: drop-shadow(var(--shadow-img));
+        justify-self: center;
+    }
+
+    .about__buttons {
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 1rem;
+    }
+
     .aboutus__data {
         margin: auto;
-        padding: 0 3rem;
+        padding: 0 2rem;
 
     }
 
@@ -596,6 +613,26 @@ img {
     .aboutus__list i {
         font-size: var(--normal-font-size + 0.1rem);
 
+    }
+
+    .aboutus__images {
+        margin: auto;
+        margin: 0 3rem;
+    }
+
+    .about__img-1 {
+        width: 90%;
+        border: 15px solid var(--body-color);
+        position: absolute;
+        top: -5rem;
+        left: 2rem;
+
+    }
+
+    .about__img-2 {
+        width: 85%;
+        margin-right: 2.5rem;
+        margin-top: 2rem;
     }
 
     .members {
