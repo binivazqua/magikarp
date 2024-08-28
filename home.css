@@ -558,8 +558,11 @@ img {
     }
 
     .section {
-        height: 850px;
+        margin: auto;
+        justify-content: center;
     }
+
+
 
     .about__container {
         margin: auto;
@@ -635,21 +638,22 @@ img {
         margin-top: 2rem;
     }
 
-    .section {
-        padding-block: 5rem 1rem 1rem 0 !important;
+    .team .section__title {
+        text-wrap: nowrap;
+        font-size: 1.5rem;
     }
 
     .members {
+        overflow: scroll;
         margin: auto;
-        flex-direction: column;
         align-items: center;
-        padding: 3rem;
 
     }
 
     .members .team__container {
-        height: 600px;
-        width: 600px;
+
+        height: 20rem;
+        width: 20rem;
         transform: scale(0.650);
         position: relative;
 
@@ -663,7 +667,7 @@ img {
     .members .member__image {
         position: absolute;
         z-index: 3;
-        top: 65px;
+        top: 50px;
 
     }
 
