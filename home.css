@@ -224,10 +224,7 @@ img {
 
 
 
-/* ============= JS ADDED CLASSES ============ */
-.show-menu {
-    right: 0;
-}
+
 
 /* ================== ABOUT ======================== */
 .about__container {
@@ -519,6 +516,7 @@ img {
 /* ================= RESPONSIVENES ================= */
 @media screen and (max-width: 450px) {
 
+
     :root {
         --biggest-font-size: 2rem;
         --h1-font-size: 1.25rem;
@@ -671,5 +669,10 @@ img {
 
     }
 
+    /* ============= JS ADDED CLASSES ============ */
+    /* ============= JS ADDED CLASSES ============ */
+    .show-menu {
+        right: 0;
+    }
 
 }
