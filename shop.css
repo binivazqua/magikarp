@@ -222,25 +222,27 @@ ul {
 /* =============================== */
 
 .logo {
-    justify-self: center;
+    justify-self: left;
     justify-content: space-between;
-    text-align: center;
+    text-align: start;
     display: flex;
     flex-direction: row;
 }
 
 .morfo_logo {
-    width: 200px;
+    width: 35%;
     padding: 0;
     margin-top: 20px;
-    margin: auto;
+    margin: 1rem;
 }
 
 
 .container {
-    width: 80%;
-    max-width: auto;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
     margin: auto;
+    overflow: hidden;
     transition: 0.5s;
 
 
@@ -253,7 +255,7 @@ ul {
 .container header {
     display: grid;
     grid-template-columns: 1fr 100px;
-    margin-top: 50px;
+    margin: 1rem;
 }
 
 .container header .shopping {
@@ -296,23 +298,33 @@ ul {
 
 .card {
     position: fixed;
+    /* Fixed to the viewport */
     top: 0;
-    left: 100%;
+    right: -500px;
+    /* Start off-screen to the right */
     width: 500px;
-    height: 1000vh;
+    /* Fixed width for the card */
+    height: 100vh;
+    /* Full viewport height */
     background-color: var(--white-color);
-
-    transition: 0.5s;
-
-
+    overflow-y: auto;
+    /* Allow vertical scrolling */
+    transition: right 0.5s ease;
+    /* Smooth transition to show the card */
+    z-index: 100;
+    /* Ensure it appears above other elements */
 }
 
+/* When the card is active, move it into view */
 .active .card {
-    left: calc(100% - 500px);
+    right: 0;
+    /* Slide the card into view */
 }
 
+/* Keep the container visible */
 .active .container {
-    transform: translateX(-200px);
+    transform: none;
+    /* Do not move the container */
 }
 
 .card h1 {
@@ -346,7 +358,7 @@ ul {
 
 .card .checkOut div:nth-child(2) {
     background-color: var(--first-color);
-    color: white;
+    /*color: white;*/
     border-left: 5px solid var(--first-color-alt);
 }
 
@@ -452,7 +464,6 @@ ul {
 .cardButton {
     width: 2.5rem;
     height: 30px;
-    color: white;
     font-size: 1.5rem;
 
     display: flex;
@@ -466,13 +477,35 @@ ul {
 }
 
 @media screen and (max-width: 450px) {
+
+
     .container {
         width: 100%;
-        /* Make the parent container flexible */
+        /* Ensure full width on small screens */
         padding: 0 10px;
-        /* Add padding to avoid items touching the screen edges */
-        overflow-x: hidden;
-        /* Hide any horizontal overflow */
+        /* Optional padding to prevent elements from touching the screen edges */
+    }
+
+    .card {
+        width: 80%;
+        height: 90%;
+        /* Adjust width for smaller screens */
+        right: -80%;
+        /* Adjust starting position to match the smaller width */
+    }
+
+    .active .card {
+        right: 0;
+        /* Slide the card fully into view */
+    }
+
+    .card .checkOut {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .container .list {
@@ -499,4 +532,7 @@ ul {
         margin: auto;
         /* Center the items horizontally */
     }
+
+
+
 }
