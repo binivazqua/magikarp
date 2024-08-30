@@ -476,6 +476,66 @@ ul {
     position: relative;
 }
 
+/* ===================== CONTACT SECTION =================== */
+.contact__container {
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    padding-top: 2rem;
+    row-gap: 2rem;
+}
+
+.contact__img {
+    width: 50%;
+    justify-self: center;
+    margin: auto;
+    filter: drop-shadow(var(--shadow-img));
+
+}
+
+.contact__content .gap {
+
+    display: grid;
+    row-gap: 2rem;
+    text-align: center;
+    justify-self: center;
+}
+
+.contact__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+    border-style: none;
+    color: var(--white-color)
+}
+
+.contact__title p {
+
+    color: var(--white-color)
+}
+
+.contact__socials {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.contact__socials a {
+    font-size: 2rem;
+    color: var(--first-color-alt);
+    filter: drop-shadow(var(--first-color));
+}
+
+.contact__info {
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    row-gap: 2rem;
+    justify-content: center;
+}
+
+
 @media screen and (max-width: 450px) {
 
 

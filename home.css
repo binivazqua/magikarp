@@ -417,6 +417,13 @@ img {
 .contact__title {
     font-size: var(--h2-font-size);
     margin-bottom: 1rem;
+    border-style: none;
+    color: var(--white-color)
+}
+
+contact__title p {
+
+    color: var(--white-color)
 }
 
 .contact__socials {
