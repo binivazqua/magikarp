@@ -535,7 +535,7 @@ ul {
     justify-content: center;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (min-width: 860px) {
 
     .container h1 {
         font-size: 3rem;
@@ -570,138 +570,134 @@ ul {
 
     .card h1 {
         font-size: 2rem;
-
-
-
-        .active .card {
-            right: 0;
-            /* Slide the card fully into view */
-        }
-
-        .card .checkOut {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 10%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .container .list {
-
-            /* Enable scrolling if items overflow vertically */
-        }
-
-        .container .list .item {
-            font-size: 1.5rem;
-            width: 100%;
-            /* Make each item take the full width of the container */
-            margin: auto;
-            /* Center the items horizontally */
-        }
-
-        .container .list .item img {
-            width: 100%;
-            /* Make each item take the full width of the container */
-            margin: auto;
-            /* Center the items horizontally */
-        }
-
-        .contact__container {
-            margin-top: 5rem;
-        }
-
-        .contact .section__title {
-            font-size: 3rem;
-        }
-
-        .contact__content .contact__info {
-            font-size: 2rem;
-        }
-
-        .contact__img {
-            width: 20%;
-        }
-
-        .contact__title {
-            font-size: 1.75rem;
-        }
-
-        .contact__socials {
-            column-gap: 5rem;
-        }
-
-        .contact__socials a {
-            font-size: 5rem;
-        }
-
-        .contact__info {
-            justify-content: space-evenly;
-            margin: 3rem auto;
-        }
-
-
-
     }
 
-    @media screen and (max-width: 450px) {
 
-
-        .container {
-            width: 100%;
-            /* Ensure full width on small screens */
-            padding: 0 10px;
-            /* Optional padding to prevent elements from touching the screen edges */
-        }
-
-        .card {
-            width: 80%;
-            height: 90%;
-            /* Adjust width for smaller screens */
-            right: -80%;
-            /* Adjust starting position to match the smaller width */
-        }
-
-        .active .card {
-            right: 0;
-            /* Slide the card fully into view */
-        }
-
-        .card .checkOut {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 10%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .container .list {
-            display: grid;
-            grid-template-columns: 1fr;
-            /* Single column */
-            gap: 20px;
-            /* Space between items */
-            margin-top: 20px;
-            overflow-y: auto;
-            /* Enable scrolling if items overflow vertically */
-        }
-
-        .container .list .item {
-            width: 100%;
-            /* Make each item take the full width of the container */
-            margin: auto;
-            /* Center the items horizontally */
-        }
-
-        .container .list .item img {
-            width: 100%;
-            /* Make each item take the full width of the container */
-            margin: auto;
-            /* Center the items horizontally */
-        }
-
-
-
+    .active .card {
+        right: 0;
+        /* Slide the card fully into view */
     }
+
+    .card .checkOut {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    .container .list .item {
+        font-size: 1.5rem;
+        width: 100%;
+        /* Make each item take the full width of the container */
+        margin: auto;
+        /* Center the items horizontally */
+    }
+
+    .container .list .item img {
+        width: 100%;
+        /* Make each item take the full width of the container */
+        margin: auto;
+        /* Center the items horizontally */
+    }
+
+    .contact__container {
+        margin-top: 5rem;
+    }
+
+    .contact .section__title {
+        font-size: 3rem;
+    }
+
+    .contact__content .contact__info {
+        font-size: 2rem;
+    }
+
+    .contact__img {
+        width: 20%;
+    }
+
+    .contact__title {
+        font-size: 1.75rem;
+    }
+
+    .contact__socials {
+        column-gap: 5rem;
+    }
+
+    .contact__socials a {
+        font-size: 5rem;
+    }
+
+    .contact__info {
+        justify-content: space-evenly;
+        margin: 3rem auto;
+    }
+
+
+
+}
+
+@media screen and (max-width: 450px) {
+
+
+    .container {
+        width: 100%;
+        /* Ensure full width on small screens */
+        padding: 0 10px;
+        /* Optional padding to prevent elements from touching the screen edges */
+    }
+
+    .card {
+        width: 80%;
+        height: 90%;
+        /* Adjust width for smaller screens */
+        right: -80%;
+        /* Adjust starting position to match the smaller width */
+    }
+
+    .active .card {
+        right: 0;
+        /* Slide the card fully into view */
+    }
+
+    .card .checkOut {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container .list {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Single column */
+        gap: 20px;
+        /* Space between items */
+        margin-top: 20px;
+        overflow-y: auto;
+        /* Enable scrolling if items overflow vertically */
+    }
+
+    .container .list .item {
+        width: 100%;
+        /* Make each item take the full width of the container */
+        margin: auto;
+        /* Center the items horizontally */
+    }
+
+    .container .list .item img {
+        width: 100%;
+        /* Make each item take the full width of the container */
+        margin: auto;
+        /* Center the items horizontally */
+    }
+
+
+
 }
