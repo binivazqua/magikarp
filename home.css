@@ -524,7 +524,7 @@ contact__title p {
 
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 860px) {
 
     :root {
         --biggest-font-size: 5rem;
@@ -562,6 +562,15 @@ contact__title p {
         transition: right 0.4s;
 
 
+    }
+
+
+    .nav__close,
+    .nav__toggle i {
+
+        color: var(--white-color);
+        font-size: 3rem;
+        font-weight: initial;
     }
 
     .section {
@@ -623,7 +632,7 @@ contact__title p {
         flex-direction: column;
         font-size: var(--normal-font-size) - 0.25rem;
         font-style: italic;
-        text-align: initial;
+        text-align: center;
         justify-content: center;
         gap: 1.5rem;
 
@@ -635,21 +644,22 @@ contact__title p {
     }
 
     .aboutus__images {
-        margin: auto;
-        margin: 0 20rem;
+        justify-content: center;
+        margin: auto 20rem;
     }
 
     .about__img-1 {
-        width: 90%;
+
+        width: 60%;
         border: 15px solid var(--body-color);
         position: absolute;
-        left: 10rem;
+        left: 30%;
 
     }
 
     .about__img-2 {
-        width: 80%;
-        margin-right: 2.5rem;
+        width: 50%;
+        right: 10%;
         margin-top: 20rem;
         margin-bottom: 5rem;
     }
