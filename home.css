@@ -574,11 +574,15 @@ contact__title p {
     }
 
     .section {
+
         margin: auto;
         justify-content: center;
     }
 
 
+    .about {
+        margin-bottom: 3rem;
+    }
 
     .about__container {
         margin: auto;
@@ -600,9 +604,9 @@ contact__title p {
     }
 
     .about__buttons {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 500;
-        padding: 1rem;
+        padding: 3rem;
     }
 
     .aboutus__data {
