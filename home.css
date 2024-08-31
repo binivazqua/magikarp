@@ -400,7 +400,7 @@ img {
 }
 
 .contact__img {
-    width: 50%;
+
     justify-self: center;
     filter: drop-shadow(var(--shadow-img));
 
@@ -517,6 +517,212 @@ contact__title p {
     justify-content: center;
     text-align: center;
     margin: 10px auto;
+
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    :root {
+        --biggest-font-size: 5rem;
+        --h1-font-size: 1.25rem;
+        --h2-font-size: 0.5rem;
+        --h3-font-size: 0.85rem;
+        --normal-font-size: 2.25rem;
+        --small-font-size: 2rem;
+    }
+
+    .morfo_logo {
+        width: 10rem;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.25rem;
+    }
+
+    .nav__menu {
+
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: hsla(255, 100%, 73%, 0.8);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        width: 80%;
+        height: 100%;
+        padding: 6rem 3rem;
+        transition: right 0.4s;
+
+
+    }
+
+    .section {
+        margin: auto;
+        justify-content: center;
+    }
+
+
+
+    .about__container {
+        margin: auto;
+        padding: 0 20rem;
+        row-gap: 3rem;
+    }
+
+
+
+    .about__description {
+        margin: 0 1rem 1rem 0.5rem !important;
+
+    }
+
+    .about__img {
+        width: 30%;
+        filter: drop-shadow(var(--shadow-img));
+        justify-self: center;
+    }
+
+    .about__buttons {
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 1rem;
+    }
+
+    .aboutus__data {
+        margin: 5rem auto;
+        padding: 0 20rem;
+
+    }
+
+    .aboutus__data .section__title {
+        margin-top: 3rem;
+        font-size: 3rem;
+
+
+    }
+
+    .aboutus__container {
+        justify-content: center;
+        row-gap: 8rem;
+        margin: auto;
+
+
+    }
+
+
+    .aboutus__list {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--normal-font-size) - 0.25rem;
+        font-style: italic;
+        text-align: initial;
+        justify-content: center;
+        gap: 1.5rem;
+
+    }
+
+    .aboutus__list i {
+        font-size: var(--normal-font-size + 0.1rem);
+
+    }
+
+    .aboutus__images {
+        margin: auto;
+        margin: 0 20rem;
+    }
+
+    .about__img-1 {
+        width: 90%;
+        border: 15px solid var(--body-color);
+        position: absolute;
+        left: 10rem;
+
+    }
+
+    .about__img-2 {
+        width: 80%;
+        margin-right: 2.5rem;
+        margin-top: 20rem;
+        margin-bottom: 5rem;
+    }
+
+    .tech .section__title {
+        font-size: 5rem;
+    }
+
+    .tech__img {
+        width: 30%;
+    }
+
+    .team .section__title {
+        text-wrap: nowrap;
+        font-size: 3rem;
+    }
+
+    .members {
+        overflow: scroll;
+        margin: auto;
+        align-items: center;
+
+    }
+
+    .members .team__container {
+
+        height: 30rem;
+        width: 30rem;
+        transform: scale(0.650);
+        position: relative;
+
+    }
+
+    .members .team__member {
+        width: auto;
+        height: auto;
+    }
+
+    .members .member__image {
+        position: absolute;
+        z-index: 3;
+        top: 4rem;
+
+    }
+
+    .contact .section__title {
+        font-size: 3rem;
+    }
+
+    .contact__img {
+        width: 20%;
+    }
+
+    .contact__title {
+        font-size: 1.75rem;
+    }
+
+    .contact__socials {
+        column-gap: 5rem;
+    }
+
+    .contact__socials a {
+        font-size: 5rem;
+    }
+
+    .contact__info {
+        justify-content: space-evenly;
+        margin: 3rem auto;
+    }
+
+    /* ============= JS ADDED CLASSES ============ */
+    /* ============= JS ADDED CLASSES ============ */
+    .show-menu {
+        right: 0;
+    }
 
 }
 
@@ -675,6 +881,8 @@ contact__title p {
         top: 50px;
 
     }
+
+
 
     /* ============= JS ADDED CLASSES ============ */
     /* ============= JS ADDED CLASSES ============ */
