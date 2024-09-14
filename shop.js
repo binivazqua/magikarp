@@ -25,13 +25,13 @@ let products = [
         id: 2,
         name: "Batería SBK1-01",
         images: "bateria_sbk1-01.png",
-        price: 2000,
+        price: 300,
     },
     {
         id: 3,
         name: "Sensor EMG SBK1-01",
         images: "emgsensor.png",
-        price: 2000,
+        price: 500,
     },
     {
         id: 4,
@@ -43,13 +43,13 @@ let products = [
         id: 5,
         name: "Hilo tensor SBK1-01",
         images: "sutumedical.png",
-        price: 2000,
+        price: 150,
     },
     {
         id: 6,
         name: "Kit de retoque SBK1-01",
         images: "kit_sbk101.png",
-        price: 2000,
+        price: 1500,
     }
 ]
 
