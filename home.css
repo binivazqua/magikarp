@@ -307,6 +307,15 @@ img {
     margin-bottom: 2rem;
 }
 
+.aboutus__description span {
+    color: var(--first-color-alt);
+}
+
+.avalados__description {
+    margin: auto;
+}
+
+
 .aboutus__images {
     position: relative;
     justify-self: center;
@@ -645,6 +654,18 @@ contact__title p {
         margin-top: 3rem;
         font-size: 3rem;
 
+
+    }
+
+    .section__title {
+        margin: auto;
+        font-size: 3rem;
+
+    }
+
+    .aval {
+        background-color: white;
+        padding: 2rem;
 
     }
 
