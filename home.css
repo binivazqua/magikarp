@@ -564,7 +564,13 @@ contact__title p {
     .nav__list {
         display: flex;
         flex-direction: column;
-        row-gap: 1.25rem;
+        row-gap: 2rem;
+        font-size: 2rem;
+    }
+
+    .nav__list .nav__items a {
+
+        font-size: 2rem;
     }
 
     .nav__menu {

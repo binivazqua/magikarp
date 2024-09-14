@@ -17,38 +17,38 @@ closeShopping.addEventListener("click", () => {
 let products = [
     {
         id: 1,
-        name: "PRODUCT 1",
+        name: "Midas SBK1-01",
         images: "generative_prosthetic.png",
-        price: 2000,
+        price: 20000,
     },
     {
         id: 2,
-        name: "PRODUCT 2",
-        images: "generative_prosthetic.png",
+        name: "Batería SBK1-01",
+        images: "bateria_sbk1-01.png",
         price: 2000,
     },
     {
         id: 3,
-        name: "PRODUCT 3",
-        images: "generative_prosthetic.png",
+        name: "Sensor EMG SBK1-01",
+        images: "emgsensor.png",
         price: 2000,
     },
     {
         id: 4,
-        name: "PRODUCT 4",
-        images: "generative_prosthetic.png",
+        name: "Electrodos (x3)",
+        images: "electrodos copia.png",
         price: 2000,
     },
     {
         id: 5,
-        name: "PRODUCT 5",
-        images: "generative_prosthetic.png",
+        name: "Hilo tensor SBK1-01",
+        images: "sutumedical.png",
         price: 2000,
     },
     {
         id: 6,
-        name: "PRODUCT 6",
-        images: "generative_prosthetic.png",
+        name: "Kit de retoque SBK1-01",
+        images: "kit_sbk101.png",
         price: 2000,
     }
 ]
@@ -60,7 +60,7 @@ const initApp = () => {
         let newDiv = document.createElement("div");
         newDiv.classList.add("item");
         newDiv.innerHTML = `
-            <img src = "images/${value.images}">
+            <img src = "images/products/${value.images}">
             <div class ="title">${value.name}</div>
             <div class "price">${value.price.toLocaleString()}</div>
             <button onclick = "addToCart(${key})"> Add To Cart </
