@@ -906,6 +906,20 @@ contact__title p {
 
     }
 
+    .section__title {
+        margin: auto;
+
+
+    }
+
+    .aval {
+        background-color: white;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+
     .about__img-2 {
         width: 85%;
         margin-right: 2.5rem;
