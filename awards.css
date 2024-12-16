@@ -436,10 +436,46 @@ ul {
 
 .container-awards .box-container {
     position: relative;
-    width: 25%;
+    width: 30%;
     padding: 3rem;
     background-color: var(--first-color);
     filter: drop-shadow(var(--shadow-img));
 
 
+}
+
+.container-awards .box-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--first-color-alt);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+
+
+
+}
+
+.container-awards .box-container:hover:before {
+
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+
+
+
+}
+
+.aboutus__images {
+    position: relative;
+    justify-self: center;
+}
+
+.about__img-2 {
+    width: 100%;
+    height: auto;
 }
