@@ -483,14 +483,24 @@ ul {
 
 /* ================== slider ====================== */
 
+.slider-container {
+    background-color: var(--first-color-alt);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
 .slider {
+
     width: 1300px;
     height: 700px;
     max-width: 100vw;
     /* same as image for better results */
-    margin: auto;
+    margin: 5rem auto;
     position: relative;
     overflow: hidden;
+
+
+
 }
 
 .list {
@@ -498,6 +508,7 @@ ul {
     height: 100%;
     display: flex;
     width: max-content;
+    transition: transform 1s ease-in-out;
 }
 
 .list img {
@@ -505,7 +516,8 @@ ul {
     max-width: 100vw;
     height: 100%;
     object-fit: cover;
-    transition: ease 1s;
+    transition: 1s;
+    box-shadow: var(--shadow-img);
 }
 
 .buttons {
@@ -553,5 +565,6 @@ ul {
 
 .dots li.active {
     width: 30px;
+
 
 }

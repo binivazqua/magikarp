@@ -7,6 +7,8 @@ let next = document.getElementById('next');
 let active = 0;
 let lengthItems = items.length - 1;
 
+
+
 next.onclick = function () {
     if (active + 1 > lengthItems) {
         active = 0;
@@ -29,6 +31,9 @@ prev.onclick = function () {
 let refreshSlider = setInterval(() => { next.click() }, 3000);
 
 function reloadSlider() {
+
+
+
     let checkLeft = items[active].offsetLeft;
     slider_list.style.left = -checkLeft + 'px';
 
