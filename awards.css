@@ -504,6 +504,7 @@ ul {
     max-width: 100vw;
     height: 100%;
     object-fit: cover;
+    transition: 1s;
 }
 
 .buttons {
@@ -546,6 +547,7 @@ ul {
     margin: 0.5rem;
     border-radius: 20px;
     opacity: 0.75;
+    transition: 1s;
 }
 
 .dots li.active {
