@@ -75,6 +75,18 @@ body {
 
 }
 
+
+h1.messageh1 {
+    width: 80rem;
+    margin: auto;
+    padding: 3rem;
+    font-size: 5rem;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
 /* ============ NAV ================= */
 ul {
     list-style: none;
