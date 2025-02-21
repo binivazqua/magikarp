@@ -1,0 +1,139 @@
+/*============= FONTS =================*/
+@font-face {
+    font-family: 'Lausanne400';
+    src: url('fonts/TWKLausanne-400.ttf');
+}
+
+@font-face {
+    font-family: 'Lausanne650';
+    src: url('fonts/TWKLausanne-650.ttf');
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(255, 100%, 64%);
+    --first-color-alt: hsl(255, 100%, 73%);
+    --first-color-light: hsl(93, 58%, 66%);
+    --title-color: hsl(228, 8%, 98%);
+    --text-color: hsl(228, 8%, 70%);
+    --white-color: hsl(228, 8%, 98%);
+    --black-color: hsl(228, 6%, 4%);
+    --body-color: hsl(228, 6%, 8%);
+    --container-color: hsl(228, 6%, 12%);
+    --shadow-img: 0 0 48px grey;
+    --shadow-box: 0 0 15px grey;
+
+    --gradient-card: linear-gradient(180deg,
+            hsla(93, 8%, 8%),
+            hsla(93, 40%, 30%));
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    /*--body-font: "Montserrat", sans-serif;*/
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lausanne400';
+}
+
+/* ============== COSAS BASE ================== */
+body {
+    /*font-family: var(--body-font);*/
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-family: 'Lausanne400';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    position: relative;
+    max-width: 50rem;
+    width: 100%;
+    background: var(--first-color-alt);
+    padding: 5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-box);
+
+}
+
+.container header {
+    font-size: 2.25rem;
+    color: var(--white-color);
+    font-weight: 400;
+    text-align: center;
+}
+
+.container .form {
+    font-size: var(--h2-font-size);
+    margin-top: 3rem;
+    color: var(--white-color);
+
+}
+
+.container .input-box {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.form .input-box input {
+    position: relative;
+    height: 3rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--text-color);
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+
+}
+
+.form .column {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.form .gender-option {
+    display: flex;
+    column-gap: 3rem;
+}
+
+.form .gender-box {
+    margin-top: 2rem;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+}

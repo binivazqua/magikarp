@@ -566,17 +566,4 @@ ul {
 
 .dots li {
     list-style: none;
-    width: 10px;
-    height: 10px;
-    background-color: var(--white-color);
-    margin: 0.5rem;
-    border-radius: 20px;
-    opacity: 0.75;
-    transition: 1s;
-}
-
-.dots li.active {
-    width: 30px;
-
-
-}
+    widt
