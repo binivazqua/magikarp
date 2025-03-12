@@ -144,7 +144,7 @@ ul {
 }
 
 /* ================= RESPONSIVENES ================= */
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 560px) {
     .nav__menu {
 
 
@@ -162,31 +162,27 @@ ul {
 
     }
 
-    .members {
-        flex-direction: column;
-        align-items: center;
+    .slider-container {
+        max-width: 500px;
+        max-height: 300px;
 
     }
 
-    .members .team__container {
-        height: 600px;
-        width: 600px;
-        transform: scale(0.650);
-        position: relative;
-
-    }
-
-    .members .team__member {
-        width: auto;
-        height: auto;
-    }
-
-    .members .member__image {
+    .slider {
+        max-width: 400px;
+        max-height: 200px;
         position: absolute;
-        z-index: 3;
-        top: 65px;
-
     }
+
+    .list img {
+        width: 450px;
+        max-width: 500px;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+        box-shadow: var(--shadow-img);
+    }
+
 
     .container {
         overflow: scroll;
@@ -566,4 +562,17 @@ ul {
 
 .dots li {
     list-style: none;
-    widt
+    width: 10px;
+    height: 10px;
+    background-color: var(--white-color);
+    margin: 0.5rem;
+    border-radius: 20px;
+    opacity: 0.75;
+    transition: 1s;
+}
+
+.dots li.active {
+    width: 30px;
+
+
+}
