@@ -143,8 +143,9 @@ ul {
     font-size: 1.25rem;
 }
 
-/* ================= RESPONSIVENES ================= */
-@media screen and (max-width: 560px) {
+
+@media screen and (max-width: 768px) {
+
     .nav__menu {
 
 
@@ -163,33 +164,71 @@ ul {
     }
 
     .slider-container {
+        width: 80vw;
+        /* Reduce el ancho */
         max-width: 500px;
-        max-height: 300px;
-
+        /* No crece más allá de 300px */
+        height: 400px;
+        /* Ajuste dinámico de altura */
+        padding: 1rem;
+        margin: 2rem auto;
+        /* Centrar */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .slider {
-        max-width: 400px;
-        max-height: 200px;
-        position: absolute;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        /* Evita desbordes */
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        /* Centrar imágenes */
+        align-items: center;
     }
 
     .list img {
-        width: 450px;
-        max-width: 500px;
-        height: 100%;
+        width: 80%;
+        /* Hace las imágenes más pequeñas */
+        max-width: 250px;
+        /* Límite de tamaño */
+        height: 200px;
+        max-height: 250px;
+        /* Mantiene la proporción */
         object-fit: cover;
-        transition: 1s;
+        transition: transform 0.5s ease;
         box-shadow: var(--shadow-img);
     }
 
-
-    .container {
-        overflow: scroll;
+    .buttons {
+        display: none;
+        /* Oculta los botones en móvil */
     }
 
+    .dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
 
+    .dots li {
+        width: 8px;
+        height: 8px;
+        margin: 0.25rem;
+    }
+
+    .dots li.active {
+        width: 20px;
+    }
 }
+
 
 .nav__list {
     display: flex;
