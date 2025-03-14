@@ -144,90 +144,6 @@ ul {
 }
 
 
-@media screen and (max-width: 768px) {
-
-    .nav__menu {
-
-
-        position: fixed;
-        top: 0;
-        right: -100%;
-        background-color: hsla(255, 100%, 73%, 0.8);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        width: 80%;
-        height: 100%;
-        padding: 6rem 3rem;
-        transition: right 0.4s;
-
-
-    }
-
-    .slider-container {
-        width: 80vw;
-        /* Reduce el ancho */
-        max-width: 500px;
-        /* No crece más allá de 300px */
-        height: 400px;
-        /* Ajuste dinámico de altura */
-        padding: 1rem;
-        margin: 2rem auto;
-        /* Centrar */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .slider {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        overflow: hidden;
-        /* Evita desbordes */
-    }
-
-    .list {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        /* Centrar imágenes */
-        align-items: center;
-    }
-
-    .list img {
-        width: 80%;
-        /* Hace las imágenes más pequeñas */
-        max-width: 250px;
-        /* Límite de tamaño */
-        height: 200px;
-        max-height: 250px;
-        /* Mantiene la proporción */
-        object-fit: cover;
-        transition: transform 0.5s ease;
-        box-shadow: var(--shadow-img);
-    }
-
-    .buttons {
-        display: none;
-        /* Oculta los botones en móvil */
-    }
-
-    .dots {
-        display: flex;
-        justify-content: center;
-        margin-top: 1rem;
-    }
-
-    .dots li {
-        width: 8px;
-        height: 8px;
-        margin: 0.25rem;
-    }
-
-    .dots li.active {
-        width: 20px;
-    }
-}
 
 
 .nav__list {
@@ -526,6 +442,104 @@ ul {
 .about__img-2 {
     width: 100%;
     height: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav__menu {
+
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: hsla(255, 100%, 73%, 0.8);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        width: 80%;
+        height: 100%;
+        padding: 6rem 3rem;
+        transition: right 0.4s;
+
+
+    }
+
+    .slider-container {
+        width: 80vw;
+        /* Reduce el ancho */
+        max-width: 500px;
+        /* No crece más allá de 300px */
+        height: 400px;
+        /* Ajuste dinámico de altura */
+        padding: 1rem;
+        margin: 2rem auto;
+        /* Centrar */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        /* Evita desbordes */
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        /* Centrar imágenes */
+        align-items: center;
+    }
+
+    .list img {
+        width: 80%;
+        /* Hace las imágenes más pequeñas */
+        max-width: 250px;
+        /* Límite de tamaño */
+        height: 200px;
+        max-height: 250px;
+        /* Mantiene la proporción */
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        box-shadow: var(--shadow-img);
+    }
+
+    .buttons {
+        display: none;
+        /* Oculta los botones en móvil */
+    }
+
+    .dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .dots li {
+        width: 8px;
+        height: 8px;
+        margin: 0.25rem;
+    }
+
+    .dots li.active {
+        width: 20px;
+    }
+
+    .container-awards {
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .container-awards .box-container {
+
+        width: 80%;
+        margin: auto;
+        padding-bottom: 3rem;
+    }
 }
 
 /* ================== slider ====================== */
