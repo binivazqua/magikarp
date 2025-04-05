@@ -54,26 +54,45 @@ dots.forEach((list, key) => {
 })
 */
 
-const wrapper = document.querySelector(".wrapper"),
-    carousel = document.querySelector(".carousel"),
-    images = document.querySelector(".carousel img"),
-    buttons = document.querySelector(".button");
-console.log(wrapper, carousel, images, buttons);
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".carousel");
+    const images = document.querySelectorAll(".carousel img");
+    const nextBtn = document.querySelector(".chevron-forward");
+    const prevBtn = document.querySelector(".chevron-back");
 
-let imageIndex = 1, intervalID;
+    if (!carousel || images.length === 0) {
+        console.warn("Carousel not found or no images inside.");
+        return;
+    }
 
+    let currentIndex = 0;
 
-// auto slide
-const autoSlide = () => {
-    // call slideimage() every 2 secs
-    intervalID = setInterval(() => slideImage(++imageIndex), 2000);
-}
+    function updateCarousel() {
+        const width = images[0].clientWidth;
+        carousel.style.transform = `translateX(-${currentIndex * width}px)`;
+        carousel.style.transition = "transform 0.5s ease-in-out";
+    }
 
-autoSlide();
+    nextBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
 
-const slideImage = () => {
-    //console.log(imageIndex);
-    // Update carousel 
-    carousel.style.transform = `translate(-${imageIndex * 100}%)`;
-}
+    prevBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    // auto
+    let intervalID = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+    }, 5000);
+});
 
