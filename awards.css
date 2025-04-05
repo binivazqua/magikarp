@@ -515,7 +515,7 @@ ul {
     .dots {
         display: flex;
         justify-content: center;
-        margin-top: 1rem;
+        margin-bottom: 2rem;
     }
 
     .dots li {
@@ -539,6 +539,10 @@ ul {
         width: 80%;
         margin: auto;
         padding-bottom: 3rem;
+    }
+
+    .message h1 {
+        font-size: 5rem;
     }
 }
 
