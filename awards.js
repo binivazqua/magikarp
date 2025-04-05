@@ -1,3 +1,4 @@
+/*
 let slider_list = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let dots = document.querySelectorAll('.slider .dots li');
@@ -51,3 +52,28 @@ dots.forEach((list, key) => {
         reloadSlider();
     })
 })
+*/
+
+const wrapper = document.querySelector(".wrapper"),
+    carousel = document.querySelector(".carousel"),
+    images = document.querySelector(".carousel img"),
+    buttons = document.querySelector(".button");
+console.log(wrapper, carousel, images, buttons);
+
+let imageIndex = 1, intervalID;
+
+
+// auto slide
+const autoSlide = () => {
+    // call slideimage() every 2 secs
+    intervalID = setInterval(() => slideImage(++imageIndex), 2000);
+}
+
+autoSlide();
+
+const slideImage = () => {
+    //console.log(imageIndex);
+    // Update carousel 
+    carousel.style.transform = `translate(-${imageIndex * 100}%)`;
+}
+
