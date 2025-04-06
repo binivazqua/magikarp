@@ -62,7 +62,7 @@ const initApp = () => {
         newDiv.innerHTML = `
             <img src = "images/products/${value.images}">
             <div class ="title">${value.name}</div>
-            <div class "price">${value.price.toLocaleString()}</div>
+            <div class "price">${value.price.toLocaleString()} MXN</div>
             <button onclick = "addToCart(${key})"> Add To Cart </
             button>
         `
