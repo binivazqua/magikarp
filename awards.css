@@ -1,4 +1,4 @@
-/*============= FONTS =================*/
+/*=============== FUENTES PERSONALIZADAS ===============*/
 @font-face {
     font-family: 'Lausanne400';
     src: url('fonts/TWKLausanne-400.ttf');
@@ -9,681 +9,278 @@
     src: url('fonts/TWKLausanne-650.ttf');
 }
 
-/*=============== VARIABLES CSS ===============*/
+/*=============== VARIABLES ===============*/
 :root {
     --header-height: 3.5rem;
-    /*========== Colors ==========*/
-    /*Color mode HSL(hue, saturation, lightness)*/
     --first-color: hsl(255, 100%, 64%);
     --first-color-alt: hsl(255, 100%, 73%);
     --first-color-dark: hsl(255, 55%, 13%);
     --title-color: hsl(228, 8%, 98%);
     --text-color: hsl(228, 8%, 70%);
-    --white-color: hsl(228, 8%, 98%);
+    --white-color: hsl(0, 0%, 100%);
     --black-color: hsl(228, 6%, 4%);
     --body-color: hsl(228, 6%, 8%);
-    --container-color: hsl(228, 6%, 12%);
-    --shadow-img: 0 0 48px rgb(24, 15, 51);
-    --gradient-card: linear-gradient(180deg,
-            hsla(93, 8%, 8%),
-            hsla(93, 40%, 30%));
-
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
-
-    /*========== Font and typography ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    /*--body-font: "Montserrat", sans-serif;*/
+    --shadow-img: 0 0 48px rgba(24, 15, 51, 0.6);
     --biggest-font-size: 2.25rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
     --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-
-    /*========== Font weight ==========*/
     --font-regular: 400;
     --font-semi-bold: 600;
     --font-bold: 700;
-
-
 }
 
-* {
+/*=============== RESET ===============*/
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
-
+    padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* ============== COSAS BASE ================== */
 body {
-    /*font-family: var(--body-font);*/
-    margin: 0;
-    padding: 0;
+    font-family: 'Lausanne400', sans-serif;
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
-    font-family: 'Lausanne400';
     padding-bottom: 10rem;
-    overflow-y: scroll;
-    justify-content: center;
-
+    overflow-x: hidden;
 }
 
-
-h1.messageh1 {
-    width: 80rem;
-    margin: auto;
-    padding: 3rem;
-    font-size: 5rem;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-/* ============ NAV ================= */
 ul {
     list-style: none;
 }
 
-/* ============== HEADER & NAV =============== */
-.header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    z-index: var(--z-fixed);
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-.nav {
-    position: relative;
-    height: var(--header-height);
+/*=============== HEADER Y LOGO ===============*/
+.container {
+    width: 100%;
+    margin: 0 auto 5rem;
+    padding: 0 1rem;
+}
+
+.logo {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 1rem 0;
 }
 
-/* ======== nav components ============ */
-.nav__logo,
-.nav__close,
-.nav__toggle {
-    display: flex;
-    color: var(--title-color);
-    cursor: pointer;
-}
-
-/* ------- nav logo -------- */
-.nav__logo {
-    font-weight: 400;
-    column-gap: 1rem;
-    align-items: center;
-}
-
-.nav__logo i {
-    color: var(--first-color-alt);
-    font-size: 1.8rem;
-    font-weight: initial;
+.morfo_logo {
+    width: 200px;
+    height: auto;
 }
 
 .arrow-back {
     font-size: 2rem;
-    padding-top: 20px;
 }
 
-/* -------- nav actions ------*/
-.nav__toggle {
-    font-size: 1.25rem;
+header h1 {
+    color: var(--white-color);
+    font-size: var(--biggest-font-size);
+    margin-top: 1rem;
 }
 
-
-
-
-.nav__list {
+/*=============== CARRUSEL ===============*/
+.wrapper {
     display: flex;
-    flex-direction: column;
-    row-gap: 3rem;
-}
-
-.nav__link {
-    color: var(--title-color);
-    /*font-weight: var(--font-semi-bold);*/
-}
-
-.nav__link:hover {
-    color: var(--first-color);
-    transition: color 0.4s;
-}
-
-.nav__close {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
-    font-size: 2rem;
-
-}
-
-.morfo_logo {
-    width: 250px;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-
-/* ============= JS ADDED CLASSES ============ */
-.show-menu {
-    right: 0;
-}
-
-/* =============================== */
-
-.logo {
-    justify-self: left;
-    justify-content: space-between;
-    text-align: start;
-    display: flex;
-    flex-direction: row;
-}
-
-.morfo_logo {
-    width: 25%;
-    padding: 0;
-    margin-top: 20px;
-    margin: 1rem;
-}
-
-
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
+    max-width: 50%;
+    max-height: auto;
     margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first-color-alt);
+    padding: 4rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.chevron-back,
+.chevron-forward {
+    font-size: 3rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.image-container-carousel {
     overflow: hidden;
-    transition: 0.5s;
+    max-width: 1000px;
+    width: 100%;
+    height: 600px;
+
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    width: max-content;
+}
+
+.carousel img {
+    flex-shrink: 0;
+    width: 1000px;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+/*=============== TARJETAS DE PREMIOS ===============*/
+.container-awards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    max-width: 1400px;
 
 
+
+    margin: 0 auto;
+}
+
+.box-container {
+    background-color: var(--first-color);
+    padding: 2rem;
+    flex: 1 1 400px;
+    max-width: 500px;
+    filter: drop-shadow(var(--shadow-img));
+    color: var(--white-color);
+    border-radius: 1rem;
 }
 
 .box-container h1 {
-    color: var(--white-color);
-    font-weight: 400;
+    font-size: 2rem;
+    margin: 1rem 0;
 }
 
-.container header {
-    display: grid;
-    grid-template-columns: 1fr 100px;
-    margin: 1rem;
+.box-container p {
+    font-size: 1.125rem;
 }
 
-/* ===================== CONTACT SECTION =================== */
+/*=============== MENSAJE FINAL ===============*/
+.message {
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.messageh1 {
+    font-size: 4rem;
+    color: white;
+}
+
+/*=============== CONTACTO ===============*/
 .contact__container {
     text-align: center;
-    align-content: center;
-    margin: auto;
-    position: relative;
-    width: 100%;
-    padding-top: 2rem;
-    row-gap: 2rem;
+    padding: 4rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .contact__img {
-    width: 50%;
-    justify-self: center;
-    margin: auto;
+    width: 200px;
+    margin: 0 auto 2rem;
     filter: drop-shadow(var(--shadow-img));
-
-}
-
-.contact__content .gap {
-
-    display: grid;
-    row-gap: 2rem;
-    text-align: center;
-    justify-self: center;
 }
 
 .contact__title {
+    color: var(--white-color);
     font-size: var(--h2-font-size);
-    margin-bottom: 1rem;
-    border-style: none;
-    color: var(--white-color)
-}
-
-.contact__title p {
-
-    color: var(--white-color)
+    margin: 1rem 0;
 }
 
 .contact__socials {
     display: flex;
     justify-content: center;
-    column-gap: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .contact__socials a {
     font-size: 2rem;
     color: var(--first-color-alt);
-    filter: drop-shadow(var(--first-color));
 }
 
 .contact__info {
-    font-style: normal;
-    display: flex;
-    flex-direction: row;
-    row-gap: 2rem;
-    justify-content: center;
+    color: var(--white-color);
+    font-size: var(--normal-font-size);
 }
 
-@media screen and (min-width: 860px) {
+/*=============== RESPONSIVE ===============*/
+@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+        .carousel img {
+            width: 100vw;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+        }
 
-    .container h1 {
-        font-size: 3rem;
-    }
+        .image-container-carousel {
+            aspect-ratio: 4 / 3;
+            background-color: #1e1e1e;
+            /* fallback */
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: var(--first-color-alt);
+            /* matches Morfo’s style */
 
-    .container {
-        width: 100%;
-        /* Ensure full width on small screens */
-        padding: 0 10rem;
-        /* Optional padding to prevent elements from touching the screen edges */
-    }
+        }
 
-    .card {
-        width: 25%;
-        height: 100%;
-        /* Adjust width for smaller screens */
-        right: -80%;
-        /* Adjust starting position to match the smaller width */
-    }
+        .wrapper {
+            flex-direction: column;
+            padding: 1rem;
+            width: max-content;
 
-    .card .cart {
-        display: flex;
-        flex-direction: row;
-
-        align-items: center;
-    }
-
-
-    .card .cart i {
-        font-size: 2rem;
-    }
-
-    .card h1 {
-        font-size: 2rem;
+        }
     }
 
 
-    .active .card {
-        right: 0;
-        /* Slide the card fully into view */
+    .messageh1 {
+        font-size: 2.5rem;
     }
 
-    .card .checkOut {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 10%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-
-    .container .list .item {
+    .box-container h1 {
         font-size: 1.5rem;
-        width: 100%;
-        /* Make each item take the full width of the container */
-        margin: auto;
-        /* Center the items horizontally */
     }
 
-    .container .list .item img {
-        width: 100%;
-        /* Make each item take the full width of the container */
-        margin: auto;
-        /* Center the items horizontally */
-    }
-
-    .contact__container {
-        margin-top: 5rem;
-    }
-
-    .contact .section__title {
-        font-size: 3rem;
-    }
-
-    .contact__content .contact__info {
-        font-size: 2rem;
+    .box-container p {
+        font-size: 1rem;
     }
 
     .contact__img {
-        width: 20%;
+        width: 120px;
     }
 
     .contact__title {
-        font-size: 1.75rem;
-    }
-
-    .contact__socials {
-        column-gap: 5rem;
+        font-size: 1.2rem;
     }
 
     .contact__socials a {
-        font-size: 5rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .messageh1 {
+        font-size: 2rem;
     }
 
-    .contact__info {
-        justify-content: space-evenly;
-        margin: 3rem auto;
-    }
-
-
-
-}
-
-/* =========    actual container ============ */
-
-.container-awards {
-    padding-top: 5rem;
-    width: 75%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto;
-}
-
-.container-awards .box-container {
-    position: relative;
-    width: 30%;
-    padding: 3rem;
-    background-color: var(--first-color);
-    filter: drop-shadow(var(--shadow-img));
-
-
-}
-
-.container-awards .box-container:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--first-color-alt);
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.5s;
-
-
-
-}
-
-.container-awards .box-container:hover:before {
-
-    transform: scaleY(1);
-    transform-origin: bottom;
-    transition: transform 0.5s;
-
-
-
-}
-
-.aboutus__images {
-    position: relative;
-    justify-self: center;
-}
-
-.about__img-2 {
-    width: 100%;
-    height: auto;
-}
-
-@media screen and (max-width: 768px) {
-
-    .nav__menu {
-
-
-        position: fixed;
-        top: 0;
-        right: -100%;
-        background-color: hsla(255, 100%, 73%, 0.8);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        width: 80%;
-        height: 100%;
-        padding: 6rem 3rem;
-        transition: right 0.4s;
-
-
-    }
-
-    .slider-container {
-        width: 80vw;
-        /* Reduce el ancho */
-        max-width: 500px;
-        /* No crece más allá de 300px */
-        height: 400px;
-        /* Ajuste dinámico de altura */
+    .wrapper {
         padding: 1rem;
-        margin: 2rem auto;
-        /* Centrar */
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
-    .slider {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        overflow: hidden;
-        /* Evita desbordes */
+    .chevron-back,
+    .chevron-forward {
+        font-size: 2.5rem;
     }
-
-    .list {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        /* Centrar imágenes */
-        align-items: center;
-    }
-
-    .list img {
-        width: 80%;
-        /* Hace las imágenes más pequeñas */
-        max-width: 250px;
-        /* Límite de tamaño */
-        height: 200px;
-        max-height: 250px;
-        /* Mantiene la proporción */
-        object-fit: cover;
-        transition: transform 0.5s ease;
-        box-shadow: var(--shadow-img);
-    }
-
-    .buttons {
-        display: none;
-        /* Oculta los botones en móvil */
-    }
-
-    .dots {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 2rem;
-    }
-
-    .dots li {
-        width: 8px;
-        height: 8px;
-        margin: 0.25rem;
-    }
-
-    .dots li.active {
-        width: 20px;
-    }
-
-    .container-awards {
-        flex-direction: column;
-        justify-content: space-around;
-
-    }
-
-    .container-awards .box-container {
-
-        width: 80%;
-        margin: auto;
-        padding-bottom: 3rem;
-    }
-
-    .message h1 {
-        font-size: 5rem;
-    }
-}
-
-/* ================== slider ====================== */
-
-.slider-container {
-    background-color: var(--first-color-alt);
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-.slider {
-
-    width: 1300px;
-    height: 700px;
-    max-width: 100vw;
-    /* same as image for better results */
-    margin: 5rem auto;
-    position: relative;
-    overflow: hidden;
-
-
-
-}
-
-.list {
-    position: absolute;
-    height: 100%;
-    display: flex;
-    width: max-content;
-    transition: transform 1s ease-in-out;
-}
-
-.list img {
-    width: 1300px;
-    max-width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s;
-    box-shadow: var(--shadow-img);
-}
-
-.buttons {
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.buttons button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--black-color);
-    opacity: 0.25;
-    border: none;
-    color: var(--white-color);
-    font-weight: bold;
-}
-
-.dots {
-    position: absolute;
-    bottom: 10px;
-    color: var(--white-color);
-    width: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.dots li {
-    list-style: none;
-    width: 10px;
-    height: 10px;
-    background-color: var(--white-color);
-    margin: 0.5rem;
-    border-radius: 20px;
-    opacity: 0.75;
-    transition: 1s;
-}
-
-.dots li.active {
-    width: 30px;
-
-
-}
-
-/* ==================== carousel ==================== */
-.wrapper {
-    display: flex;
-    max-width: 115rem;
-    width: 100%;
-    height: 70rem;
-    background-color: var(--first-color-alt);
-    align-items: center;
-    margin: auto;
-}
-
-.chevron-back,
-.chevron-forward {
-    font-size: 5rem;
-}
-
-.wrapper i.button {
-    cursor: pointer;
-
-}
-
-i.button:active {
-    transform: scale(0.90);
-}
-
-
-.image-container-carousel {
-    height: 60rem;
-    max-width: 100rem;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-
-
-}
-
-.image-container-carousel .carousel {
-    height: 100%;
-    overflow: hidden;
-    width: max-content;
-    display: flex;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out;
-
-}
-
-.carousel img {
-    flex-shrink: 0;
-    height: 100%;
-    width: 100rem;
-    object-fit: cover;
 }

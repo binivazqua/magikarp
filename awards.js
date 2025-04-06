@@ -68,10 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
 
     function updateCarousel() {
-        const width = images[0].clientWidth;
+        const width = carousel.querySelector("img").clientWidth;
         carousel.style.transform = `translateX(-${currentIndex * width}px)`;
         carousel.style.transition = "transform 0.5s ease-in-out";
     }
+
 
     nextBtn?.addEventListener("click", (e) => {
         e.preventDefault();
